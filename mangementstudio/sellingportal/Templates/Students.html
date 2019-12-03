@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content%}
+<h1> List of Students</h1>
+<table>
+    <tr>
+        <td>
+            id
+        </td>
+        <td>
+            First name
+        </td>
+        <td>
+             Last name
+        </td>
+        <td>
+             age
+        </td>
+        <td>
+            Date Birth
+        </td>
+
+    </tr>
+{% for student in students %}
+<tr>
+        <td>
+            {{student.id}}
+        </td>
+        <td>
+            <a href="/Degree/{{student.id}}" >{{student.First_name}} </a>
+        </td>
+        <td>
+             {{student.Last_name}}
+        </td>
+        <td>
+             {{student.age}}
+        </td>
+        <td>
+            {{student.Data_birth}}
+        </td>
+
+    </tr>
+
+{% endfor %}
+
+
+    </table>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> List of Student degree</h1>
+<ul>
+{% for degree in Degrees %}
+    <li>
+        <h3> {{degree.student_Degree}}</h3> </li>
+<h3> {{degree.student_id.age}}</h3>
+{%endfor%}
+</ul>
+<h1> add new degree </h1>
+<form action="" method="post">
+    <h1> Register New student </h1>
+    {% csrf_token %}
+    {{formregister.as_p}}
+    <button type="submit"> Add degree </button>
+    <h1>  {{msg}}</h1>
+
+</form>
+{% endblock%}

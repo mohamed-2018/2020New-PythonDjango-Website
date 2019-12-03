@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content%}
+
+
+name:{{name}},
+age:{{age}},
+<h1> List of Jobs</h1>
+{% for item in jobs %}
+<h3> {{item}}</h3>
+{% endfor %}
+{% endblock %}
